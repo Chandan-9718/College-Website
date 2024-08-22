@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react"; // React ko import kar rahe hain
+import { BrowserRouter, Routes, Route } from "react-router-dom"; // React Router DOM ke components ko import kar rahe hain
+import CollegeDetails from "./CollegeDetails"; // CollegeDetails component ko import kar rahe hain
+import LoginPortal from "./LoginPortal"; // LoginPortal component ko import kar rahe hain
 
-function App() {
+const App = () => { 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    // BrowserRouter component ka use karke routing setup kar rahe hain
+    <BrowserRouter>
+      {/* Routes component ke andar sabhi route definitions hain */}
+      <Routes>
+        {/* Route component ka use karke home path '/' ke liye LoginPortal component render karenge */}
+        <Route path="/" element={<LoginPortal />} />
+        {/* Route component ka use karke '/CollegeDetails' path ke liye CollegeDetails component render karenge */}
+        <Route path="/CollegeDetails" element={<CollegeDetails />} />
+      </Routes>
+    </BrowserRouter>
+  ); 
+};
 
-export default App;
+export default App; // App component ko export kar rahe hain
