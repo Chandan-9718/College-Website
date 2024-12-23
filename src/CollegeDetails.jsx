@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // React aur useState ko import karte hain
-
+ 
 import {
   AppBar,
   Tabs,
@@ -29,7 +29,7 @@ import { useLocation } from "react-router-dom"; // useLocation hook ko import ka
 const CollegeDetails = () => {
   const [value, setValue] = useState(0);
   // useState hook ka upyog karte hue value state ko initialize karte hain
-
+ 
   const location = useLocation();
   // useLocation hook ka upyog karte hue current location ko access karte hain
 
@@ -133,5 +133,4 @@ const CollegeDetails = () => {
     </Box>
   );
 };
-
 export default CollegeDetails;

@@ -37,7 +37,7 @@ const LoginPortal = () => {
               Get started by Sign-up or login through your account.
             </Typography>
           )}
-        </Box> 
+        </Box>  
         <br />
         {!state.showForm && (
           <Box className="buttonContainer">
